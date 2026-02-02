@@ -3,40 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>smakai.ch | Coming Soon</title>
+    <title>smakai.ch | Swiss AI Architecture</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .container {
-            text-align: center;
-            padding: 2rem;
-            z-index: 1;
-        }
-
-        h1 {
-            font-size: 3rem;
-            letter-spacing: -1px;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p {
-            font-size: 1.25rem;
-            color: #94a3b8;
-            margin-bottom: 2rem;
+            margin: 0; padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0f172a; color: #f8fafc;
+            display: flex; flex-direction: column; align-items: center;
+            min-height: 100vh; overflow-x: hidden;
         }
 
         .status-badge {
@@ -46,30 +20,115 @@
             background: rgba(56, 189, 248, 0.1);
             border: 1px solid rgba(56, 189, 248, 0.2);
             color: #38bdf8;
-            font-size: 0.875rem;
-            font-weight: 600;
+            font-size: 0.75rem;
+            font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .brand-section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 450px; 
+            margin-top: 5vh; 
         }
 
         .glow {
             position: absolute;
-            width: 400px;
-            height: 400px;
+            width: 500px;
+            height: 500px;
             background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
             border-radius: 50%;
+            z-index: 0;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 0;
+            pointer-events: none;
         }
+
+        .content-header {
+            z-index: 1;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4.5rem; letter-spacing: -3px; margin: 0;
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.1rem; color: #94a3b8; margin-top: 0.5rem;
+            letter-spacing: 2px; text-transform: uppercase; font-weight: 300;
+        }
+
+        .main-content { 
+            max-width: 580px; padding: 0 2rem; 
+            margin-top: 3rem; z-index: 2; 
+        }
+
+        .bio {
+            font-size: 1.05rem; color: #94a3b8; line-height: 1.7;
+            border-top: 1px solid rgba(148, 163, 184, 0.1); padding-top: 2rem;
+        }
+
+        .highlight { color: #f8fafc; font-weight: 500; }
+
+        .industry-grid {
+            display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.75rem; color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 4px 10px; border-radius: 4px; background: rgba(56, 189, 248, 0.05);
+        }
+
+        .contact-wrapper { text-align: center; margin: 4rem 0; z-index: 2; }
+
+        .contact {
+            color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 1.1rem;
+            transition: 0.2s; border-bottom: 1px solid transparent;
+        }
+
+        .contact:hover { border-bottom: 1px solid #38bdf8; opacity: 0.8; }
+
+        @media (max-width: 600px) { h1 { font-size: 3rem; } .tagline { font-size: 0.9rem; } }
     </style>
 </head>
+
 <body>
-    <div class="glow"></div>
-    <div class="container">
-        <div class="status-badge">Launching Soon</div>
-        <h1>smakai</h1>
-        <p>Intelligence in the making.</p>
+
+    <div class="brand-section">
+        <div class="glow"></div>
+        <div class="content-header">
+            <div class="status-badge">Launching Soon</div>
+            <h1>smakai</h1>
+            <p class="tagline">Enterprise AI. Simplified.</p>
+        </div>
     </div>
+
+    <div class="main-content">
+        <div class="bio">
+            <span class="highlight">Bridging AI innovation and Swiss security.</span>
+            I provide a foolproof AI Kickstarter for any sector: combining sovereign Swiss infrastructure with rapid, need-based POCs that turn complexity into your competitive edge.
+        </div>
+
+        <div class="industry-grid">
+            <span class="tag">Banking</span>
+            <span class="tag">Manufacturing</span>
+            <span class="tag">MedTech</span>
+            <span class="tag">Legal</span>
+        </div>
+    </div>
+
+    <div class="contact-wrapper">
+        <a href="mailto:hello@smakai.ch" class="contact">hello@smakai.ch</a>
+    </div>
+
 </body>
 </html>
