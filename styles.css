@@ -118,12 +118,35 @@ h1 {
 }
 
 .member-name { font-size: 1rem; display: block; }
+.member-name-container {
+    display: flex;
+    align-items: center; /* Vertically aligns icon with text */
+    justify-content: center; /* Keeps it centered in the column */
+    gap: 8px; /* Space between name and icon */
+}
+
+.linkedin-inline {
+    display: inline-flex;
+    color: #0077b5; 
+    transition: filter 0.2s ease, transform 0.2s ease;
+    vertical-align: middle;
+}
+
+.linkedin-inline:hover {
+    opacity: 1;
+    transform: scale(1.1); /* Slight pop on hover */
+}
+
+.member-name {
+    margin: 0;
+}
 
 .team-member {
     display: flex;
     flex-direction: column;
-    align-items: center;    
-    text-align: center;     
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .member-desc {
