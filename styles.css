@@ -1,0 +1,141 @@
+/* Variables for easy branding updates */
+:root {
+    --bg-color: #0f172a;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.15);
+    --border-color: rgba(56, 189, 248, 0.2);
+}
+
+body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color); 
+    color: var(--text-main);
+    display: flex; flex-direction: column; align-items: center;
+    min-height: 100vh; overflow-x: hidden;
+}
+
+.brand-section {
+    position: relative;
+    display: flex; justify-content: center; align-items: center;
+    width: 100%; flex: 1; 
+    margin-top: 15vh;        /* Increased from 5vh to 15vh for more space */
+    margin-bottom: 8rem;
+}
+
+.glow {
+    position: absolute;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, rgba(15, 23, 42, 0) 70%);
+    border-radius: 50%;
+    z-index: 0; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.content-header { z-index: 1; text-align: center; }
+
+h1 {
+    font-size: 4.5rem; letter-spacing: -3px; margin: 0;
+    background: linear-gradient(90deg, var(--accent), #818cf8);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 99px;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid var(--border-color);
+    color: var(--accent);
+    font-size: 0.75rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+}
+
+.tagline {
+    font-size: 1.1rem; color: var(--text-muted); margin-top: 0.5rem;
+    letter-spacing: 2px; text-transform: uppercase; font-weight: 300;
+}
+
+.footer-container {
+    width: 100%; max-width: 580px;
+    padding: 0 2rem 4rem 2rem; 
+    z-index: 2; margin-top: auto; 
+}
+
+.bio {
+    font-size: 1.1rem; line-height: 1.6;
+    color: var(--text-muted); text-align: justify;
+    margin-bottom: 2rem;
+}
+
+.highlight { color: var(--text-main); font-weight: 500; }
+
+.team-section {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2rem; margin-top: 2.5rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.1);
+    padding-top: 2rem;
+}
+
+.member-photo {
+    width: 140px; height: 160px;
+    object-fit: cover; border-radius: 4px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+
+.member-role {
+    color: var(--accent); font-size: 0.85rem;
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 0.5rem; display: block;
+}
+
+.member-name { font-size: 1rem; display: block; }
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centers the photo and name horizontally */
+    text-align: center;     /* Centers the text lines */
+}
+
+.member-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 0.75rem;
+    text-align: justify;     /* Changed from 'justify' to 'center' for symmetry */
+    hyphens: auto;
+    max-width: 250px;       /* Keeps the text from getting too wide in centered mode */
+}
+
+.industry-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; justify-content: center;}
+
+.tag {
+    font-size: 0.75rem; color: var(--accent); 
+    border: 1px solid var(--border-color);
+    padding: 4px 10px; border-radius: 4px; 
+    background: rgba(56, 189, 248, 0.05);
+}
+
+.contact-wrapper { text-align: center; margin: 4rem 0; z-index: 2; }
+
+.contact {
+    color: var(--accent); text-decoration: none; 
+    font-weight: 600; font-size: 1.1rem;
+    transition: 0.2s; border-bottom: 1px solid transparent;
+}
+
+.contact:hover { border-bottom: 1px solid var(--accent); opacity: 0.8; }
+
+/* Responsive */
+@media (max-width: 600px) { 
+    h1 { font-size: 3rem; } 
+    .tagline { font-size: 0.9rem; }
+    .team-section { grid-template-columns: 1fr; }
+}
