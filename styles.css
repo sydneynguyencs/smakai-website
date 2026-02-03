@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --bg-color: #0f172a;
     --text-main: #f8fafc;
@@ -13,7 +17,7 @@ body {
     background-color: var(--bg-color); 
     color: var(--text-main);
     display: flex; flex-direction: column; align-items: center;
-    min-height: 100vh; overflow-x: hidden;
+    min-height: 100vh; overflow-x: hidden; position: relative;
 }
 
 .brand-section {
@@ -26,10 +30,14 @@ body {
 
 .glow {
     position: absolute;
-    width: 500px; height: 500px;
+    width: 100vw;       
+    max-width: 500px;   
+    height: 500px;
     background: radial-gradient(circle, var(--accent-glow) 0%, rgba(15, 23, 42, 0) 70%);
     border-radius: 50%;
-    z-index: 0; top: 50%; left: 50%;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
@@ -114,8 +122,8 @@ h1 {
 .team-member {
     display: flex;
     flex-direction: column;
-    align-items: center;    /* Centers the photo and name horizontally */
-    text-align: center;     /* Centers the text lines */
+    align-items: center;    
+    text-align: center;     
 }
 
 .member-desc {
@@ -123,12 +131,12 @@ h1 {
     color: var(--text-muted);
     line-height: 1.5;
     margin-top: 0.75rem;
-    text-align: justify;     /* Changed from 'justify' to 'center' for symmetry */
+    text-align: justify;     
     hyphens: auto;
-    max-width: 250px;       /* Keeps the text from getting too wide in centered mode */
+    max-width: 250px;       
 }
 
-.industry-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; justify-content: center;}
+.industry-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; justify-content: center; width: 100%;}
 
 .tag {
     font-size: 0.75rem; color: var(--accent); 
