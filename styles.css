@@ -1,4 +1,3 @@
-/* Variables for easy branding updates */
 :root {
     --bg-color: #0f172a;
     --text-main: #f8fafc;
@@ -21,7 +20,7 @@ body {
     position: relative;
     display: flex; justify-content: center; align-items: center;
     width: 100%; flex: 1; 
-    margin-top: 15vh;        /* Increased from 5vh to 15vh for more space */
+    margin-top: 15vh;        
     margin-bottom: 8rem;
 }
 
@@ -62,15 +61,30 @@ h1 {
 }
 
 .footer-container {
-    width: 100%; max-width: 580px;
-    padding: 0 2rem 4rem 2rem; 
-    z-index: 2; margin-top: auto; 
+    width: 100%;
+    box-sizing: border-box; 
+    max-width: 580px;
+    padding: 0 1.5rem 4rem 1.5rem; 
+    z-index: 2;
+    margin-top: auto; 
 }
 
 .bio {
-    font-size: 1.1rem; line-height: 1.6;
-    color: var(--text-muted); text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    text-align: justify; 
     margin-bottom: 2rem;
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 0 1rem 3rem 1rem; 
+    }
+    
+    .bio {
+        font-size: 1rem; 
+    }
 }
 
 .highlight { color: var(--text-main); font-weight: 500; }
